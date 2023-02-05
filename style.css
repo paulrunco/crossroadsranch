@@ -18,6 +18,9 @@ body {
 }
 
 h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     text-transform: uppercase;
     font-size: 3rem;
@@ -296,6 +299,11 @@ main {
 
     .download-card {
         margin: 1rem 0.5rem;
+    }
+
+    h1 {
+        flex-direction: row;
+        justify-content: center;
     }
 
 }
