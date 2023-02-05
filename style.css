@@ -18,7 +18,15 @@ body {
 }
 
 h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
     color: #5c6420;
+}
+
+h1 img {
+    height: 3rem;
+    padding-right: 2rem;
 }
 
 h2 {
@@ -26,35 +34,56 @@ h2 {
     font-weight: 100;
 }
 
+a {
+    text-decoration: none;
+}
+
 .header {
-    margin-top: 1rem;
+    margin-top: 4rem;
     padding: 0 1rem;
 }
 
 .logo {
-    display: block;
     width: 100%;
     margin: 1rem auto;
 }
 
-.burger img{
-    height: 3rem;
+.visible {
+    display: block;
+}
+
+.logo--small {
+    display: none;
+    width: 110px;
+}
+
+.spacer {
+    flex: 1 1 auto;
 }
 
 .main-nav {
-    display: none;
+    padding: 1rem;
+    width: 100%;
+    max-width: 1000px;
+    z-index: 10;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: row;
 }
 
-
-.main-nav ul {
+.main-nav__items {
+    min-width: 30%;
+    background-color: white;
+    display: none;
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
 .main-nav__item {
-    text-decoration: none;
-    display: block;
+    display: inline-block;
     padding: 0.5rem;
     color: #5c6420;
 }
@@ -62,6 +91,10 @@ h2 {
 .main-nav__item:hover,
 .main-nav__item:active {
     color: #c49c2c;
+}
+
+.burger {
+    padding: 0 0 0 1rem;
 }
 
 .hero {
@@ -83,15 +116,22 @@ h2 {
 
 
 .hero-content h1 {
+    text-align: inherit;
+    font-size: 2rem;
     color: #c49c2c
 }
 
 .hero-content h2 {
     color: white;
+    text-align: center;
+}
+
+.hero-content__buttons {
+    display: flex;
+    flex-direction: column;
 }
 
 .button {
-    display: block;
     font-weight: bold;
     padding: .4rem 1.5rem;
     border: none;
@@ -101,27 +141,36 @@ h2 {
     border: 2px solid white;
     margin: 0.5rem auto;
     width: 100%;
-    max-width: 300px;
+    max-width: 425px;
     font-size: 1rem;
 }
 
 .button span {
     display: inline-block;
     vertical-align: middle;
-    margin: 0 0.5rem;
 }
 
 .sign-up-icon {
-    background: url("https://icongr.am/entypo/add-user.svg?color=000000");
+    background: url("https://icongr.am/clarity/assign-user.svg?color=000000");
     width: 2rem;
     height: 2rem;
 }
 
+#sign-up:hover .sign-up-icon {
+    background: url("https://icongr.am/clarity/assign-user.svg?color=FFFFFF");
+
+}
+
 .schedule-icon {
-    background: url("https://icongr.am/entypo/calendar.svg?color=000000");
+    background: url("https://icongr.am/clarity/calendar.svg?color=000000");
     width: 2rem;
     height: 2rem;
 }
+
+#see-schedule:hover .schedule-icon {
+    background: url("https://icongr.am/clarity/calendar.svg?color=FFFFFF");
+}
+
 
 .button:hover,
 .button:active {
@@ -144,6 +193,44 @@ main {
     margin: 1rem;
 }
 
+.schedule {
+    width: 100%;
+}
+
+.download-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color:white;
+    padding: 1rem;
+    text-align: center;
+    margin: 1rem;
+    box-shadow: 2px 2px 4px rgba(0,0,0, 0.4);
+    border-radius: 8px;
+    max-width: 360px;
+    min-width: 185px;
+    min-height: 180px;
+}
+
+.download-card h3 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.download-card__icon {
+    background-color: rgba(255, 255, 255, 0.5);
+    max-width: 8rem;
+    margin: auto;
+}
+
+#daycare {
+    background: #c49c2c;
+}
+
+#summer-camp {
+    background: #3c2424;
+}
+
 #footer {
     border-top: 1px solid #3c2414;
     margin: 3rem 1rem 0;
@@ -161,10 +248,6 @@ main {
 
 .contact {
     margin: 0.5rem 0;
-}
-
-.contact__item a {
-    text-decoration: none;
 }
 
 .contact__item p {
@@ -186,3 +269,33 @@ main {
     height: 1rem;
 }
 
+@media (min-width:426px) {
+    .burger {
+        display: none;
+    }
+
+    .main-nav__items {
+        display: block;
+    }
+
+    .hero-content__buttons {
+        flex-direction: row;
+        justify-content: flex-end;
+        padding: 0;
+    }
+
+    .hero-content__buttons a {
+        margin: 0 0.5rem;
+    }
+
+    .download-cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .download-card {
+        margin: 1rem 0.5rem;
+    }
+
+}

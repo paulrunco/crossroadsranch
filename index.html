@@ -7,20 +7,22 @@
     <title>Crossroads Ranch and Daycare</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
+    <nav class="main-nav">
+        <a href="index.html"><img class="logo--small" src="images/logo.png" alt=""></a>
+        <span class="spacer"></span>
+        <ul class="main-nav__items" id="nav-items">
+            <a href="#about"><li class="main-nav__item">About Us</li></a>
+            <a href="#schedule"><li class="main-nav__item">Schedule</li></a>
+            <a href="#registration"><li class="main-nav__item">Registration</li></a>
+            <a href="#contact"><li class="main-nav__item">Contact Us</li></a>
+        </ul>
+        <a href=javascript:void(0) onclick="toggleNavigation()"><img class="burger" src="https://icongr.am/clarity/bars.svg?color=5c6420" alt=""></a>
+    </nav>
     <header class="header">
-        <div class="burger"><img src="https://icongr.am/octicons/three-bars.svg" alt="hamburger menu"></div>
         <a href="index.html"><img src="images/logo.png" class="logo" alt="Crossroads Ranch and Daycare"></a>
-        <nav class="main-nav">
-            <ul>
-                <a href="#about" class="main-nav__item"><li>About Us</li></a>
-                <a href="programs.html" class="main-nav__item"><li>Our Programs</li></a>
-                <a href="animals.html" class="main-nav__item"><li>Our Animals</li></a>
-                <a href="registration.html" class="main-nav__item"><li>Registration</li></a>
-                <a href="contact.html" class="main-nav__item"><li>Contact Us</li></a>
-            </ul> 
-        </nav>
     </header>
     <div class="hero">
         <div class="hero-content">
@@ -29,22 +31,26 @@
                 horsemanship, crafts, and activities,
                 located in beautiful Pengrove California
             </h1>
-            <div class="hero-content__call-to-action">
-                <h2>Signups fill up fast, reserve your spot today!</h2>
-                <button class="button button--accent">
-                    <span class="sign-up-icon"></span>    
-                    <span>Sign up</span>
-                </button>
-                <button class="button">
-                    <span class="schedule-icon"></span>
-                    <span>See the Schedule</span> 
-                </button>
+            <h2>Signups fill up fast, reserve your spot today!</h2>
+            <div class="hero-content__buttons">
+                <a href="#registration">
+                    <button class="button button--accent" id="sign-up">
+                        <span class="sign-up-icon"></span>    
+                        <span>Sign up</span>
+                    </button>
+                </a>
+                <a href="#schedule">
+                    <button class="button" id="see-schedule">
+                        <span class="schedule-icon"></span>
+                        <span>See the Schedule</span> 
+                    </button>
+                </a>
             </div>
         </div>
     </div>
     <main>
         <section id="about">
-            <h1>About Us</h1>
+            <h1><img src="images/2Bday-party.jpg" alt="">Cross Roads Ranch</h1>
             <p>
                 Crossroads Ranch, located in Penngrove, California, 
                 offers a unique daycare experience in a beautiful ranch setting. 
@@ -65,10 +71,42 @@
             </p>
         </section>
         <section id="schedule">
-            <h1>Program Schedule</h1>
+            <h1><img src="images/Riding-Symbol.jpg" alt="Silhouette of girl riding a horse"> Program Schedule</h1>
+            <a href="images/schedule.gif">
+                <img class="schedule" src="images/schedule.gif" alt="Program schedule">
+            </a>
         </section>
         <section id="registration">
-            <h1>Registration</h1>
+            <h1><img src="images/dog-down.jpg" alt="">Registration</h1>
+            <p>
+                Download and fill out the attached registration packet for the program your
+                would like to attend. Then attach and email the packet to us at:
+                <a href="mailto:horsemom302@aol.com">horsemom302@aol.com</a>
+            </p>
+            <div class="download-cards">
+                <div class="download-card" id="daycare">
+                    <h3>Day Care Registration Forms</h3>
+                    <button class="button download">
+                        <span class="download-icon">
+                            <img src="https://icongr.am/entypo/arrow-bold-down.svg?color=000000" alt="">
+                        </span>
+                        <span>Download</span> 
+                    </button>
+                </div>
+                <div class="download-card" id="summer-camp">
+                    <h3>Summer Camp Registration Forms</h3>
+                    <button class="button download">
+                        <span class="download-icon">
+                            <img src="https://icongr.am/entypo/arrow-bold-down.svg?color=000000" alt="">
+                        </span>
+                        <span>Download</span> 
+                    </button>
+                </div>
+                </div>
+            <p>
+                Acceptance is first come - first serve. We will email you a confirmation
+                once your payment has been accepted.
+            </p>
         </section>
     </main>
     <footer id="footer">
@@ -76,7 +114,7 @@
             <img src="https://icongr.am/entypo/facebook.svg" alt="Facebook logo">
             <img src="https://icongr.am/entypo/instagram.svg" alt="Instagram logo">
         </div>
-        <div class="contact">
+        <div class="contact" id="contact">
             <div class="contact__item">Kristine Sheets-Stewart</div>
             <div class="contact__item">
                 <img class="phone" src="https://icongr.am/entypo/phone.svg" alt="phone icon">
