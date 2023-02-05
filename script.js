@@ -2,7 +2,7 @@ document.addEventListener("scroll", (event) => {
     var mainLogo = document.querySelector(".logo--small");
     var scrollPosition = window.scrollY;
     var width = window.innerWidth;
-    if (scrollPosition > 200 && width > 425) {
+    if (scrollPosition > 650 && width > 425) {
         mainLogo.style.display = "block";   
     } else {
         mainLogo.style.display = "none";   
