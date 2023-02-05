@@ -23,7 +23,7 @@ h1 {
     align-items: center;
     text-align: center;
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 2rem;
     color: #5c6420;
 }
 
@@ -120,7 +120,6 @@ a {
 
 .hero-content h1 {
     text-align: inherit;
-    font-size: 2rem;
     color: #c49c2c
 }
 
