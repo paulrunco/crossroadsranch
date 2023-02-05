@@ -35,6 +35,7 @@ h1 img {
 h2 {
     color: #5c6420;
     font-weight: 100;
+    text-align: center;
 }
 
 a {
@@ -114,7 +115,6 @@ a {
     position: absolute;
     bottom: 0;
     color: #5c6420;
-    background-image: linear-gradient(180deg, rgba(0,0,0, 0.6), rgba(5, 5, 5, 1));
     padding: 1rem;
 }
 
@@ -200,6 +200,16 @@ main {
     width: 100%;
 }
 
+.emphasis {
+    background-color: #c49c2c;
+    color: white;
+    text-align: center;
+    margin: auto;
+    max-width: 475px;
+    margin: 0.5rem auto;
+    padding: 0.5rem;
+}
+
 .download-card {
     display: flex;
     flex-direction: column;
@@ -231,7 +241,7 @@ main {
 }
 
 #summer-camp {
-    background: #3c2424;
+    background: #3c2414;
 }
 
 #footer {
